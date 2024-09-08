@@ -6,6 +6,7 @@ import ColorPicker from './components/Tools/ColorPicker'
 import UnitConverter from './components/Tools/Unitconverter/UnitConverter'
 import TextFormatter from './components/Tools/TextFormatter/TextFormatter'
 import ImageResizer from './components/Tools/Imageresize/resize'
+import HomePage from './components/Home'
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Navbar />
       <div className=" flex-1 my-10">
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/ColorPicker" element={<ColorPicker />} />
           <Route path="/UnitConverter" element={<UnitConverter />} />
           <Route path="/Resize" element={<ImageResizer />} />
