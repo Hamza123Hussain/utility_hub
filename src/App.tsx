@@ -13,8 +13,10 @@ const App: React.FC = () => {
       <Navbar />
       <div className=" flex-1 my-10">
         <Routes>
-          <Route path="/ColorPicker" element={<ImageResizer />} />
+          <Route path="/ColorPicker" element={<ColorPicker />} />
           <Route path="/UnitConverter" element={<UnitConverter />} />
+          <Route path="/Resize" element={<ImageResizer />} />
+          <Route path="/TextFormat" element={<TextFormatter />} />
         </Routes>
       </div>
       <Footer />
