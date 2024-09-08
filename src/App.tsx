@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import ColorPicker from './components/Tools/ColorPicker'
 import UnitConverter from './components/Tools/Unitconverter/UnitConverter'
 import TextFormatter from './components/Tools/TextFormatter/TextFormatter'
+import ImageResizer from './components/Tools/Imageresize/resize'
 
 const App: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const App: React.FC = () => {
       <Navbar />
       <div className=" flex-1 my-10">
         <Routes>
-          <Route path="/ColorPicker" element={<TextFormatter />} />
+          <Route path="/ColorPicker" element={<ImageResizer />} />
           <Route path="/UnitConverter" element={<UnitConverter />} />
         </Routes>
       </div>
