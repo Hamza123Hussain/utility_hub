@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPalette, faCogs, faListAlt } from '@fortawesome/free-solid-svg-icons'
+import {
+  faPalette,
+  faCogs,
+  faListAlt,
+  faTextHeight,
+  faExpandArrowsAlt,
+} from '@fortawesome/free-solid-svg-icons'
 
 const Navbar: React.FC = () => {
   return (
@@ -9,21 +15,35 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex flex-col gap-5 sm:flex-row justify-between items-center">
         <div className="text-lg font-semibold">
           <Link to="/" className="flex items-center hover:text-[#FF9A8B]">
-            <FontAwesomeIcon icon={faListAlt} className="mr-2" /> UtilityHub
+            <img src="Logo.png" width={50} alt="" />
+            <span>UtilityHub</span>
           </Link>
         </div>
-        <Link
-          to="/ColorPicker"
-          className="flex items-center hover:text-[#FF9A8B]"
-        >
-          <FontAwesomeIcon icon={faPalette} className="mr-2" /> Color Picker
-        </Link>
-        <Link
-          to="/UnitConverter"
-          className="flex items-center hover:text-[#FF9A8B]"
-        >
-          <FontAwesomeIcon icon={faCogs} className="mr-2" /> Unit Converter
-        </Link>
+        <div className=" flex flex-col sm:flex-row gap-10">
+          <Link
+            to="/ColorPicker"
+            className="flex items-center hover:text-[#FF9A8B]"
+          >
+            <FontAwesomeIcon icon={faPalette} className="mr-2" /> Color Picker
+          </Link>
+          <Link
+            to="/UnitConverter"
+            className="flex items-center hover:text-[#FF9A8B]"
+          >
+            <FontAwesomeIcon icon={faCogs} className="mr-2" /> Unit Converter
+          </Link>
+          <Link to="/Resize" className="flex items-center hover:text-[#FF9A8B]">
+            <FontAwesomeIcon icon={faExpandArrowsAlt} className="mr-2" /> Image
+            Resize
+          </Link>
+          <Link
+            to="/TextFormat"
+            className="flex items-center hover:text-[#FF9A8B]"
+          >
+            <FontAwesomeIcon icon={faTextHeight} className="mr-2" /> Text
+            Formatter
+          </Link>
+        </div>
       </div>
     </nav>
   )
